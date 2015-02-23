@@ -3,7 +3,7 @@
   <head>
     <meta name="generator"
     content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-    <title>Page Title</title>
+    <title>Nacho Time!</title>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
@@ -16,43 +16,62 @@
 	<script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
+	<!-- MAIN PAGE -->
     <div data-role="page" id="main-page">
-      <div data-role="header">
-        <h1>Nacho Time</h1>
-      </div>
-      <div data-role="content">
-		<a href="#movies" data-role="button">Movies</a> 
-		<a href="#tv-shows" data-role="button">TV Shows</a> 
-		<a href="#cartoons" data-role="button">Cartoons</a></div>
-      <div data-role="footer" data-position="fixed">
-        <h4>PimV</h4>
-      </div>
+		<div data-role="header">
+			<h1>Nacho Time</h1>
+		</div>
+		<div data-role="content">
+		<div class="type-container">
+			<a href="#item-list" data-type="movie" data-role="button">Movies</a> 
+			<a href="#item-list" data-type="tv-show" data-role="button">TV Shows</a> 
+			<a href="#item-list" data-type="cartoon" data-role="button">Cartoons</a>
+		</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>Your own IMDB!</h4>
+		</div>
     </div>
-    <div data-role="page" id="movies">
+	<!-- END MAIN PAGE -->
+	
+	<!-- ITEM LIST -->
+    <div data-role="page" id="item-list">
       <div data-role="header" data-rel="back">
-        <h1>News</h1>
+          <h1>Nacho Time</h1>
       </div>
       <div data-role="content">
-		<ul data-role="listview">
-			<li><a href=".detail-page"><img class="ui-li-thumb" src="img/no-img.jpg">Movie 1</a></li>
-			<li><a href=".detail-page"><img class="ui-li-thumb" src="img/no-img.jpg">Movie 2</a></li>
-			<li><a href=".detail-page"><img class="ui-li-thumb" src="img/no-img.jpg">Movie 3</a></li>
+		<ul class="content-list" data-role="listview">
 		</ul>
       </div>
       <div data-role="footer" data-position="fixed">
-        <h4>By Daniel and Pim</h4>
+        <h4>Your own IMDB!</h4>
       </div>
     </div>
-	<div data-role="page" class="detail-page">
+	<!-- END ITEM LIST -->
+	
+	<!-- DETAIL PAGE -->
+	<div data-role="page" id="detail-page">
       <div data-role="header" data-rel="back">
-        <h1>{Movie Title}</h1>
+        <h1>Nacho Time</h1>
       </div>
       <div data-role="content">
-		VAGE SHIT
-      </div>
-      <div data-role="footer" data-position="fixed">
-        <h4>By Daniel and Pim</h4>
-      </div>
+		<div id="item-img-container" style="text-align: center;margin: 0 auto; " >
+		
+		</div>
+		<div class="ui-body ui-body-a">
+			<p>
+				<span>Title: <span id="item-title"></span></span>
+			</p>
+			<p>		
+				<span>Description: <p id="item-description"></p></span>
+			</p>
+	
+		</div>		
     </div>
+    <div data-role="footer" data-position="absolute">
+        <h4>Your own IMDB!</h4>
+      </div>
+    </div>	
+	<!-- END DETAIL PAGE -->
   </body>
 </html>
