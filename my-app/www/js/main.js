@@ -1,4 +1,5 @@
-	 moviesData = 
+
+moviesData = 
 	[
 		{
 			id: 1,
